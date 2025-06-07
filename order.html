@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Summary - Ishan's Dine</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .order-box {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .order-box h2 {
+      color: #d84315;
+      margin-bottom: 20px;
+    }
+
+    .order-box img {
+      width: 350px;
+      margin-top: 20px;
+      border-radius: 12px;
+    }
+
+    .payment-placeholder {
+      background: #fff8e1;
+      padding: 20px;
+      margin-top: 30px;
+      border: 2px dashed #ff9800;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ishan's Dine</h1>
+    <p>Order Summary & Payment</p>
+  </header>
+
+  <div class="order-box">
+    <h2>🛍️ Your Order</h2>
+    <p id="order-items">Items Ordered: </p>
+    <p id="order-total">Total Cost: </p>
+
+    <div class="payment-placeholder">
+      <h3>💳 Payment Placeholder</h3>
+      <p>This is where the payment feature will be added in future.</p>
+    </div>
+
+    <img src="https://via.placeholder.com/350x200?text=Thanks+for+Ordering!" alt="Thank You" />
+  </div>
+
+  <script>
+    document.getElementById("order-items").innerText += localStorage.getItem("cartCount") || 0;
+    document.getElementById("order-total").innerText += "₹" + (localStorage.getItem("cartTotal") || 0);
+  </script>
+</body>
+</html>
