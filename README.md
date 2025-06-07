@@ -26,5 +26,6 @@ A colorful food-focused e-commerce interface developed using **HTML**, **CSS**, 
 
 **Akash M**
 
----
+HEAD
+
 Feel free to fork, star, and share this project!
